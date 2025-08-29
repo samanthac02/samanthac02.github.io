@@ -3,27 +3,27 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Portfolio</title>
+  <title>Samantha Chang's Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: 'Inter', sans-serif;
+      font-family: 'Halenoir', sans-serif;
     }
 
     body {
-      background-color: #e6e0d9;
-      color: #111;
+      background-color: #DFD6C8;
+      color: #000;
       line-height: 1.6;
     }
-
+    
     header {
-      padding: 2rem;
-      text-align: center;
+      text-align: left;
+      margin-bottom: 2rem;
+      padding: 0;
     }
 
     header h1 {
@@ -32,99 +32,104 @@
     }
 
     header p {
-      font-size: 1.2rem;
-      color: #444;
+      font-size: 1.5rem;
+      color: #343A3D;
     }
+
+    .portfolio-header {
+      margin-top: 4rem;
+    }
+
+    .portfolio-header h1,
+    .portfolio-header p {
+      margin: 0;
+      padding-bottom: 10px;
+    }
+
+
+    .h1 {
+      font-size: 2rem;
+      font-style: italic;
+      font-weight: 400;
+      margin-bottom: 1rem;
+    }
+
 
     .gallery {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2rem;
+      gap: 5rem;
       padding: 2rem;
       max-width: 1300px;
       margin: 0 auto;
     }
 
     .gallery-item {
-      background-color: #f4f1ee;
-      padding: 1rem;
-      border-radius: 8px;
+      background-color: transparent;
+      padding: 0;                   
+      border-radius: 0; 
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
+      align-items: flex-start;
+      gap: 0.6rem;
+      height: 100%;
       transition: box-shadow 0.3s ease;
     }
 
-    .gallery-item:hover {
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
-
-    .gallery-item img {
-      width: 100%;
-      border-radius: 6px;
-      margin-bottom: 1rem;
-    }
-
     .caption-title {
-      font-weight: bold;
+      margin-top: 0.5rem;
       font-size: 0.9rem;
-      color: #555;
-      text-transform: uppercase;
-      margin-bottom: 0.4rem;
+      color: #727476;
     }
 
     .caption-heading {
-      font-size: 1.3rem;
+      font-size: 1.75rem;
       font-weight: 600;
-      margin-bottom: 0.5rem;
+      line-height: 1.2;
     }
 
     .caption-body {
-      color: #333;
+      margin-top: 0.5rem;
+      color: #343A3D;
       font-size: 1rem;
+      margin-bottom: 1rem;
     }
-
 
     footer {
       text-align: center;
       padding: 2rem;
       font-size: 0.9rem;
-      color: #666;
+      color: #727476;
     }
 
     .slideshow-container {
-        position: relative;
-        width: 100%;
-        overflow: hidden;
-        border-radius: 6px;
+      position: relative;
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      overflow: hidden;
+      border-radius: 6px;
     }
 
     .slide {
-    width: 100%;
-    display: none;
-    border-radius: 6px;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: none;
+      border-radius: 6px;
     }
 
     .slide.active {
-    display: block;
+      display: block;
     }
 
     .top-panel {
-    background-color: #e6e0d9;
-    padding: 2rem 0;
-    }
-
-    .panel-container {
-    max-width: 1300px;
-    margin: 0 auto;
-    padding: 0 2rem;
-    width: 100%;
+      padding: 0.5rem 0 2rem 0;
     }
 
     .panel-art {
-    width: 100%;
-    border-radius: 6px;
-    margin-bottom: 1.5rem;
+      width: 100%;
+      border-radius: 6px;
+      margin-bottom: 1.5rem;
     }
 
     .panel-text {
@@ -132,82 +137,87 @@
     }
 
     .underline {
-    border-bottom: 2px solid #111;
-    margin-top: 1rem;
+      margin-top: auto;
+      border-bottom: 5px solid #000;
+      width: 100%;
+      height: 0;
     }
+
 
     .underline-top {
-    border-bottom-width: 4px;
+      border-bottom-width: 5px;
     }
-
-
 
     .panel-container {
-    max-width: 1300px;
-    margin: 0 auto;
-    padding: 0 2rem;
-    width: 100%;
-    }
-
-    .panel-text {
-    text-align: left;
+      max-width: 1300px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      width: 100%;
     }
 
     .panel-credits {
-    font-size: 0.9rem;
-    color: #666;
-    margin-bottom: 0.8rem;
+      font-size: 1rem;
+      color: #727476;
     }
 
     .panel-title {
-    font-size: 2rem;
-    font-weight: 600;
-    margin-bottom: 0.5rem;
+      font-size: 2rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
     }
 
     .panel-subtitle {
-    font-size: 1.1rem;
-    color: #333;
+      margin-top: 0.5rem;
+      color: #343A3D;
+      font-size: 1.4rem;
+      margin-bottom: 2rem;
     }
-
 
     .corner-name {
     position: absolute;
     top: 1rem;
     left: 1.5rem;
-    font-size: 2rem;
+    font-size: 1.7rem;
     font-weight: 100;
     font-family: 'Name', sans-serif;
-    color: #000000;
+    color: #000;
     padding: 0.4rem 0.8rem;
     border-radius: 5px;
     }
 
+    @font-face {
+      font-family: 'Name';
+      src: url('assets/fonts/Rodchenko Constructed ML.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
 
     @font-face {
-        font-family: 'Name';
-        src: url('assets/fonts/Rodchenko Constructed ML.ttf') format('truetype');
-        font-weight: normal;
-        font-style: normal;
-        }
-
-
+      font-family: 'Halenoir';
+      src: url('assets/fonts/HalenoirCompact-Text-Thin.otf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
   </style>
 </head>
 <body>
+    <!-- <img class="panel-art" src="assets/header-image.png"> -->
+
     <div class="corner-name">SAMANTHA CHANG</div>
-  <header>
-    <h1>My Portfolio</h1>
-    <p>A showcase of featured projects</p>
-  </header>
+    <div class="panel-container">
+      <header class="portfolio-header">
+        <h1>Welcome to My Portfolio!</h1>
+        <p>A portal into what I'm making, including my iOS apps, artificial intelligence (AI) tools, and robotics projects</p>
+      </header>
+    </div>
 
     <section class="top-panel">
     <div class="panel-container">
         <div class="h1">Most Recent Project</div>
-        <img class="panel-art" src="assets/Drowning Detection Device Compatible App (1).jpg" alt="Decorative Art">
+        <img class="panel-art" src="assets/background.png">
         <div class="panel-text">
-        <div class="panel-credits">Words by Kristen Boer, Sam Schulman, and Shannon Vossler · Visuals by Manuela Santos Gutierrez</div>
-        <h2 class="panel-title">Strategy only works if it sticks</h2>
+        <div class="panel-credits">iOS App · Cedars-Sinai Medical Center</div>
+        <h2 class="panel-title">Physician Assistant App</h2>
         <p class="panel-subtitle">Three tips for embedding it in your company’s DNA.</p>
         <div class="underline underline-top"></div>
         </div>
@@ -221,9 +231,13 @@
     <img class="slide" src="assets/Drowning Detection Device Compatible App (1).jpg" alt="Slide 2" />
     <img class="slide" src="assets/Drowning Prevention Device.png" alt="Slide 3" />
     </div>
-      <div class="caption-title">Omada Health</div>
-      <div class="caption-heading">From New Venture to Population-Level Impact</div>
-      <div class="caption-body">An IDEO project grows into a $1 billion company fighting chronic disease.</div>
+      <div class="caption-title">Cedars-Sinai Medical Center · Intern Project</div>
+      <div class="caption-heading">DECN (Discrete Element Capture from Notes)</div>
+      <div class="caption-body">
+        An LLM tool and pipeline that converts unstructured text data into structured discrete fields, allowing for analysis by doctors and data analysts at California's largest hospital.<br><br>
+        <strong>Technologies:</strong> HTML/CSS & JavaScript frontend. Python, Sanic, & OpenAI API backend. Integrated w/ AWS, and published using Docker.
+      </div>
+
       <div class="underline"></div>
     </div>
 
@@ -233,8 +247,8 @@
         <img class="slide" src="assets/Drowning Detection Device Compatible App (1).jpg" alt="Slide 5" />
         <img class="slide" src="assets/Drowning Prevention Device.png" alt="Slide 6" />
     </div>
-    <div class="caption-title">Boom Supersonic</div>
-    <div class="caption-heading">Reinventing Supersonic Flight With Boom</div>
+    <div class="caption-title">iOS App · 20,000+ downloads</div>
+    <div class="caption-heading">ScrollType Apple Watch Keyboard</div>
     <div class="caption-body">Ultrafast air travel is coming back, with an all-new passenger experience.</div>
     <div class="underline"></div>
     </div>
@@ -242,39 +256,39 @@
 
     <div class="gallery-item">
       <img src="your-image-3.jpg" alt="Project 3" />
-      <div class="caption-title">QVC</div>
-      <div class="caption-heading">Changing the Conversation on Menopause</div>
-      <div class="caption-body">How QVC is reframing midlife as a time for women to thrive.</div>
+      <div class="caption-title">iOS App · Apple Developer Challenge Winner</div>
+      <div class="caption-heading">Epic Word Trip</div>
+      <div class="caption-body">A word game app that combines travel themes with vocabulary puzzles. Built with Swift and SpriteKit, and featured in the Apple Developer Challenge.</div>
       <div class="underline"></div>
     </div>
 
     <div class="gallery-item">
       <img src="your-image-4.jpg" alt="Project 4" />
-      <div class="caption-title">Sample</div>
-      <div class="caption-heading">Title Here</div>
-      <div class="caption-body">Brief description of the project goes here.</div>
+      <div class="caption-title">Autonomous Robot · MIT Inventeam $7,500 Grant</div>
+      <div class="caption-heading">Stride - Autonomous Navigation Walker</div>
+      <div class="caption-body">A self-driving mobility aid that detects obstacles using LiDAR and guides users through complex environments. Designed by MIT InvenTeam grant recipients. Click here to see my full technical documentation</div>
       <div class="underline"></div>
     </div>
 
     <div class="gallery-item">
       <img src="your-image-5.jpg" alt="Project 5" />
-      <div class="caption-title">Sample</div>
-      <div class="caption-heading">Title Here</div>
-      <div class="caption-body">Brief description of the project goes here.</div>
+      <div class="caption-title">iOS App and Device · MIT Inventeam $10,000 Grant</div>
+      <div class="caption-heading">Drowning Detection Wearable</div>
+      <div class="caption-body">A waterproof sensor that detects signs of drowning and sends real-time alerts to a connected iOS app. Funded by a $10,000 MIT InvenTeam grant.</div>
       <div class="underline"></div>
     </div>
 
     <div class="gallery-item">
       <img src="your-image-6.jpg" alt="Project 6" />
-      <div class="caption-title">Sample</div>
-      <div class="caption-heading">Title Here</div>
-      <div class="caption-body">Brief description of the project goes here.</div>
+      <div class="caption-title">iOS App · Congressional App Challenge 2nd Place</div>
+      <div class="caption-heading">Youth Voter</div>
+      <div class="caption-body">A civic engagement app that helps teens preregister to vote, stay informed about elections, and understand their voting rights by state.</div>
       <div class="underline"></div>
     </div>
 
     <div class="gallery-item">
       <img src="your-image-7.jpg" alt="Project 7" />
-      <div class="caption-title">Sample</div>
+      <div class="caption-title">iOS App</div>
       <div class="caption-heading">Title Here</div>
       <div class="caption-body">Brief description of the project goes here.</div>
       <div class="underline"></div>
@@ -298,7 +312,7 @@
   </section>
 
   <footer>
-    &copy; Made from scratch in HTML/CSS + JavaScript by Samantha Chang!
+    &copy; Made from scratch in HTML/CSS + JavaScript by Samantha Chang
   </footer>
 
 <script>
@@ -314,7 +328,7 @@
 
     if (slides.length > 0) {
       slides[0].classList.add('active');
-      setInterval(showSlide, 2000);
+      setInterval(showSlide, 3000);
     }
   });
 </script>
